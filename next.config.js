@@ -5,7 +5,7 @@ module.exports = {
   i18n: {
     locales: ["default", "en-US", "en-gb", "es", "fr-fr", "de-de"],
     defaultLocale: "en-US",
-    localeDetection: false,
+    localeDetection: true,
     domains: [
       {
         domain: "exampleigus.com",
