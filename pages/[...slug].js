@@ -44,7 +44,6 @@ export async function getStaticProps({ params, locale }) {
     props: {
       locales,
       locale,
-      defaultLocale,
       story: data ? data.story : false,
       key: data ? data.story.id : false,
     },
