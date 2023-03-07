@@ -40,9 +40,12 @@ export async function getStaticProps({ params, locale }) {
   const storyblokApi = getStoryblokApi();
   let { data } = await storyblokApi.get(`cdn/stories/${slug}`, sbParams);
 
+  const locales = ["en-US", "en-gb", "es", "fr-fr", "de-de"];
+  const serializedLocales = locales.map((locale) => String(locale));
+
   return {
     props: {
-      locales,
+      locales: serializedLocales,
       locale,
       story: data ? data.story : false,
       key: data ? data.story.id : false,
